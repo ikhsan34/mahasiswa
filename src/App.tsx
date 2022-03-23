@@ -1,7 +1,7 @@
 import './styles.css'
 import './index.css'
 import Mahasiswa from './Mahasiswa';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
@@ -39,10 +39,15 @@ function App() {
   const [remove, setRemove] = useState([] as any);
   const handleRemove = () => {
     remove.forEach((element: any) => {
-      setMahasiswa(mahasiswa.filter(item => item.getNIM() + item.getNama() + item.getMatakuliah() !== element))
+      setMahasiswa(mahasiswa.filter(item => item.getNIM() + item.getNama() + item.getMatakuliah() !== element));
+      setRemove(remove.filter((item: any) => item !== element));
     });
-    setRemove([]);
+
   }
+
+  useEffect(() => {
+    handleRemove();
+  }, [mahasiswa]);
 
 
   return (

@@ -1,0 +1,51 @@
+body {
+    margin: 20px 100px;
+}
+
+form {
+    width: 200px;
+}
+
+form input{
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+form button {
+    margin:auto;
+    display:block;
+}
+
+table {
+    margin-bottom: 10px;
+}
+
+.switch th, .switch td{
+    padding: 0 5px;
+    white-space: nowrap;
+    color: grey;
+}
+
+.selector{
+    margin:auto;
+    display:block;
+}
+
+.table-mhs {
+    width: 70%;
+}
+
+.table-mhs, .table-mhs th, .table-mhs td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.table-mhs th {
+    text-align: center;
+}
+
+.center-number {
+    text-align: center;
+}
